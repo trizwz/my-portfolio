@@ -11,10 +11,7 @@
 
 body {
     background: linear-gradient(to bottom,
-            /*#430189*/
-            #080620
-            /*#800000*/
-            3%, rgb(39, 39, 65) 100%);
+            #9307ca 3%, rgb(0, 0, 0) 100%);
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -24,7 +21,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 30px 15px 0 5px;
+    margin-left: 40px;
+    bottom: 10px;
 }
 
 ul,
@@ -46,7 +45,8 @@ section {
     font-size: 25px;
     cursor: pointer;
     transition: 0.3s ease;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: JetBrains Mono, 'sans serif';
 }
 
 .fa-solid {
@@ -72,7 +72,7 @@ section {
     justify-content: left;
     flex-direction: column;
     gap: 2rem;
-    margin-left: 6rem;
+    margin-left: 40px;
 }
 
 .home_content {
@@ -113,6 +113,106 @@ section {
 
 .social-icon :hover {
     filter: blur(2px);
+}
+
+
+.btn {
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin-right: 120px;
+    left: 100px;
+    bottom: 72px;
+}
+
+.btn a {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+
+.btn:hover a {
+    letter-spacing: 3px;
+}
+
+.btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.btn:hover a::before {
+    transform: skewX(45deg) translateX(200%)
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #c32aff;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.btn:hover::before {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #c32aff;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.btn:hover::after {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
 }
 
 h1 {
@@ -158,12 +258,15 @@ h1 {
 
 .myphoto {
     position: relative;
-    margin-left: 6rem;
+    margin-left: 40px;
     width: 400px;
     height: 500px;
-    border-radius: 40px;
+    border-radius: 20px;
     float: left;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.14),
+    box-shadow: 0 8px 32px 0px rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    filter: blur(.5px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 h2 {
@@ -177,29 +280,59 @@ h2 {
     position: absolute;
     margin: 150px auto;
     margin-top: 200px;
-    margin-left: 32rem;
+    margin-left: 29rem;
     width: 40%;
     color: var(--maintext-color);
     font-size: 1rem;
     font-weight: 500;
 }
 
-.tools {
+.toolsBtn a{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     margin-top: 20px;
 }
 
-.tools a {
+.toolsBtn a {
     font-family: JetBrains Mono, 'Sans Serif';
-    font-weight: 600;
-    font-size: 14px;
-    background-color: rgba(154, 151, 151, 0.2);
-    padding: 7px 7px;
+    font-weight: 300;
+    font-size: 12.5px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    color: #fff;
+    z-index: 1;
+    letter-spacing: 1px;
     text-decoration: none;
-    color: white;
-    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+    display: inline-block;
+}
+
+.toolsBtn a:hover a {
+    letter-spacing: 3px;
+}
+
+.toolsBtn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.10), transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+.toolsBtn:hover a::before {
+    transform: skewX(45deg) translateX(200%)
 }
 
 .taglist {
@@ -222,8 +355,8 @@ h2 {
 
 /*scroll config*/
 .toolsImg {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 10px;
     margin-right: 8px;
 }
@@ -233,22 +366,23 @@ h2 {
     width: 100%;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
-    margin-top: 510px;
+    margin-top: 530px;
 }
 
 .scroll div {
     white-space: nowrap;
     animation: animate var(--t) linear infinite;
     animation-delay: calc(var(--t) * -1);
+
 }
 
 @keyframes animate {
     0% {
-        transform: translateX(100%);
+        transform: translateX(190%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-300%);
     }
 }
 
@@ -256,20 +390,6 @@ h2 {
     display: inline-flex;
 }
 
-.scroll div:nth-child(2) {
-    animation: animate2 var(--t) linear infinite;
-    animation-delay: calc(var(--t) / -2);
-}
-
-@keyframes animate2 {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-200%);
-    }
-}
 
 ::-webkit-scrollbar {
     width: 1px;
