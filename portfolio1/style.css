@@ -6,12 +6,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Jetbrains mono, 'sans serif', 'Times New Roman';
+    font-family: Jetbrains Mono, 'sans serif', 'Times New Roman';
 }
 
 body {
     background: linear-gradient(to bottom,
-            #9307ca 3%, rgb(0, 0, 0) 100%);
+            #45035f 3%, rgb(0, 0, 0) 100%);
     height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -29,7 +29,7 @@ header {
 ul,
 li,
 a {
-    font-family: Jetbrains mono;
+    font-family: Jetbrains Mono;
     font-weight: 700;
     font-size: 18px;
     color: var(--maintext-color);
@@ -38,7 +38,7 @@ a {
 
 
 section {
-    min-height: 100vh;
+    min-height: 120vh;
 }
 
 .logo {
@@ -46,7 +46,7 @@ section {
     cursor: pointer;
     transition: 0.3s ease;
     font-weight: 800;
-    font-family: JetBrains Mono, 'sans serif';
+    font-family: Jetbrains Mono, 'sans serif';
 }
 
 .fa-solid {
@@ -81,14 +81,16 @@ section {
     align-items: baseline;
     justify-content: left;
     text-align: left;
-    margin-top: 15rem;
-
+    margin-top: 7rem;
+    
 }
 
 .introducion {
     color: var(--maintext-color);
-    font-weight: 800;
+    font-weight: 600;
     font-size: 2rem;
+    letter-spacing: -2px;
+    margin-top: 5.5rem;
 }
 
 
@@ -97,6 +99,7 @@ section {
     font-weight: 500;
     text-align: left;
     color: var(--maintext-color);
+    margin-top: 1.5rem;
 }
 
 .social-icon i {
@@ -105,10 +108,10 @@ section {
     align-items: center;
     margin: 2rem 0.5rem 2rem 0;
     transition: 0.3s ease;
-    font-size: 2rem;
+    font-size: 25px;
     color: var(--maintext-color);
     cursor: pointer;
-
+    
 }
 
 .social-icon :hover {
@@ -224,15 +227,16 @@ h1 {
 .alert {
     text-align: right;
     white-space: nowrap;
-    padding-left: 2.5rem;
-    margin-top: 3px;
+    padding-left: 2rem;
+    top: 313rem;
 }
 
 .pulse {
     position: relative;
     margin: 2rem 0.5rem 2rem 0;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
+    margin-top: 5rem;
     background: #60f127;
     /* #F12727;*/
     border-radius: 50%;
@@ -246,7 +250,7 @@ h1 {
     background: inherit;
     border-radius: inherit;
     animation: pulseAnimate 3s ease-out infinite;
-    animation-delay: calc(1s *var(--i));
+    animation-delay: calc(.5s *var(--i));
 }
 
 @keyframes pulseAnimate {
@@ -256,6 +260,8 @@ h1 {
     }
 }
 
+
+/*section2*/
 .myphoto {
     position: relative;
     margin-left: 40px;
@@ -294,8 +300,8 @@ h2 {
 }
 
 .toolsBtn a {
-    font-family: JetBrains Mono, 'Sans Serif';
-    font-weight: 300;
+    font-family: Jetbrains Mono, 'Sans Serif';
+    font-weight: 500;
     font-size: 12.5px;
     padding: 10px;
     justify-content: center;
@@ -373,14 +379,14 @@ h2 {
     white-space: nowrap;
     animation: animate var(--t) linear infinite;
     animation-delay: calc(var(--t) * -1);
-
+    
 }
 
 @keyframes animate {
     0% {
         transform: translateX(190%);
     }
-
+    
     100% {
         transform: translateX(-300%);
     }
@@ -390,7 +396,22 @@ h2 {
     display: inline-flex;
 }
 
+/*projects*/
 
+.projetos {
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.projetos h3{
+    font-weight: 400;
+    color: rgb(151, 80, 217);
+    letter-spacing: -1px;
+}
+
+
+
+/*scrollbar*/
 ::-webkit-scrollbar {
     width: 1px;
     background-color: transparent;
@@ -402,6 +423,10 @@ h2 {
     border-radius: 50px;
 }
 
+
+
+
+/*background stars config*/
 #stars {
     width: 1px;
     height: 1px;
