@@ -24,6 +24,8 @@ header {
     padding: 30px 15px 0 5px;
     margin-left: 40px;
     bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 ul,
@@ -82,20 +84,20 @@ section {
     justify-content: left;
     text-align: left;
     margin-top: 7rem;
-    
+    padding: 10px;
 }
 
-.introducion {
+.introduction {
     color: var(--maintext-color);
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 800;
+    font-size: 2.8rem;
     letter-spacing: -2px;
     margin-top: 5.5rem;
 }
 
 
 .home_content p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 500;
     text-align: left;
     color: var(--maintext-color);
@@ -108,7 +110,7 @@ section {
     align-items: center;
     margin: 2rem 0.5rem 2rem 0;
     transition: 0.3s ease;
-    font-size: 25px;
+    font-size: 36px;
     color: var(--maintext-color);
     cursor: pointer;
     
@@ -124,7 +126,7 @@ section {
     width: 155px;
     height: 50px;
     margin-right: 120px;
-    left: 100px;
+    left: 130px;
     bottom: 72px;
 }
 
@@ -225,10 +227,12 @@ h1 {
 
 
 .alert {
-    text-align: right;
+    position: relative;
+    margin: 0 2em; 
+    bottom: 1.5em; 
+    width: 15px;
+    height: 15px;
     white-space: nowrap;
-    padding-left: 2rem;
-    top: 313rem;
 }
 
 .pulse {
