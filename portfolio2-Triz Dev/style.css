@@ -1,8 +1,19 @@
 :root {
     --color-text: #fff2bf;
+
+    /*2° idea*/
+    --first-color: #BDBDBD;
+    --second-color: #9C9C9C;
+    --background-color: #373737;
+    --background-color: #282828;
+    --subtext-color: #CACACA;
+    --idk-color: #6C6C6C;
+    --darkest-color: #0F0F0F;
+    --gray-color: #919191;
+    --text-color: #fff;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,11 +21,13 @@
     list-style: none;
     text-decoration: none;
 }
-
-body{
-    background: #664200;
+ 
+body {
+    background: var(--darkest-color);
 }
 
+
+/*Inicio*/
 .header {
     position: fixed;
     right: 0;
@@ -28,26 +41,35 @@ body{
     background: transparent;
 }
 
-.header .logo{
+/* .header .logo {
     height: 50px;
     width: 50px;
+} */
+
+.header .logo {
+    font-size: 50px;
+    font-weight: 100;
+    -webkit-text-stroke: 0.5px white;
+    font-family: Alagard;
+    color: transparent;
+    letter-spacing: 5px;
 }
 
-.navlist{
+.navlist {
     display: flex;
 }
 
-.navlist a{
+.navlist a {
     color: white;
-    margin-left:  60px;
+    margin-left: 60px;
     border-bottom: 2px solid transparent;
-    font-weight: 600; 
+    font-weight: 600;
     transition: all .55s ease;
 
 }
 
-.navlist a:hover{
-    border-bottom: 2px solid black;
+.navlist a:hover {
+    border-bottom: 2px solid var(--subtext-color);
 }
 
 
@@ -58,71 +80,135 @@ body{
     margin-left: 10em;
 }
 
-.home{
+.home {}
 
-}
-
-.text h3{
+.text h3 {
     font-weight: 400;
-    font-size: 30px;
-    color: var(--color-text);
-    
+    font-size: 28px;
+    color: var(--text-color);
+    display: inline-block;
 }
 
-.text h1{
+#first {
+    background: var(--idk-color);
+    padding: 2px 15px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.text h1 {
     font-weight: 700;
     font-size: 90px;
-    color: var(--color-text);
-   
+    color: var(--text-color);
 }
 
-.text h2{
+.text h2 {
     font-weight: 600;
     font-size: 40px;
-    color: var(--color-text);
+    color: var(--text-color);
 }
 
-button{
+.text span {
+    color: var(--idk-color);
+}
+
+button {
     border-radius: 5px;
     border: none;
+    background: transparent;
 }
-.btn{
-    padding: 0.1rem;
-    border-radius: 4px;
+
+.btn {
+    margin-top: 20px;
+    padding: 0.2rem;
+    border-radius: 12px;
     border: none;
     position: relative;
-    background: #664200;
+    background: var(--background-color);
     cursor: pointer;
-    overflow: hidden;   
+    overflow: hidden;
 }
 
 .in {
     padding: 10px 40px;
-    background: #664200;
+    background: var(--darkest-color);
     font-size: 1rem;
     text-transform: uppercase;
     color: white;
-    font-weight: 600; 
+    font-weight: 600;
     position: relative;
-    border-radius: 5px;
+    border-radius: 9px;
     z-index: 99;
 }
 
-
-.btn::after{
+.btn::after {
     content: ' ';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 1rem;
-    height: 10rem;
+    width: 2rem;
+    height: 20rem;
     background: white;
     transform: translate(-50%, -50%) rotate(45deg);
     animation: animate 2s linear infinite;
 }
 
 @keyframes animate {
-    100%{
-        transform: translate(-50%, -50%) rotate(255deg);
+    100% {
+        transform: translate(-50%, -50%) rotate(225deg);
     }
 }
+
+/*Sobre mim*/
+
+.aboutme {
+    margin-top: 20em;
+} 
+
+.photo img{
+    width: 382px;
+    height: 540px;
+    margin-left: 8em;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 0.2rem;
+    background-color: #BDBDBD;
+}
+
+
+.me{
+    color: var(--second-color);
+    margin-left: 34em;
+    width: 40%;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: -300px;
+}
+
+#iconsdiv div{
+    margin-left: 20px;
+}
+
+.socialIcons #icons{
+    font-size: 2em;
+    color: var(--first-color);
+    display: flex;
+    padding: 10px;
+    list-style: none;
+    margin-left: 32rem;
+    margin-top: 0.4rem;
+}
+
+#icons .icon{
+    border-radius: 50px;
+    color: var(--background-color);
+    background: var(--text-color);
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
