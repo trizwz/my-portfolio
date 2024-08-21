@@ -13,6 +13,7 @@
     --text-color: #fff;
 }
 
+
 * {
     padding: 0;
     margin: 0;
@@ -21,13 +22,21 @@
     list-style: none;
     text-decoration: none;
 }
- 
+
 body {
-    background: var(--darkest-color);
+    background: var(--first-color);
+    width: auto;
 }
 
+.container {
+    max-width: 144vh;
+    max-height: 144vh;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
 
 /*Inicio*/
+
 .header {
     position: fixed;
     right: 0;
@@ -74,13 +83,10 @@ body {
 
 
 .home {
-    display: flex;
-    align-items: center;
-    margin-top: 20rem;
-    margin-left: 10em;
+    position: relative;
+    padding-top: 20em;
+    z-index: 1;
 }
-
-.home {}
 
 .text h3 {
     font-weight: 400;
@@ -162,53 +168,138 @@ button {
 /*Sobre mim*/
 
 .aboutme {
-    margin-top: 20em;
-} 
+    position: relative;
+    padding-top: 20em;
+    z-index: 1;
+}
 
-.photo img{
+
+
+.photo img {
     width: 382px;
     height: 540px;
-    margin-left: 8em;
     border-radius: 50px;
-    overflow: hidden;
     padding: 0.2rem;
     background-color: #BDBDBD;
+    float: left;
 }
 
-
-.me{
-    color: var(--second-color);
-    margin-left: 34em;
+.title {
+    margin-top: 2em;
+    font-size: 40px;
+    margin-left: 10em;
+    color: var(--text-color);
     width: 40%;
-    font-size: 1em;
-    font-weight: 600;
-    margin-top: -300px;
+    font-weight: 800;
 }
 
-#iconsdiv div{
-    margin-left: 20px;
+.me {
+    margin-left: 20em;
+    color: var(--second-color);
+    width: 40%;
+    font-size: 20px;
+    font-weight: 400;
+
 }
 
-.socialIcons #icons{
-    font-size: 2em;
-    color: var(--first-color);
+.socialmenu {
     display: flex;
-    padding: 10px;
+    margin-left: 24.5rem;
+    margin-top: 30px;
+}
+
+.socialmenu ul li {
     list-style: none;
-    margin-left: 32rem;
-    margin-top: 0.4rem;
-}
-
-#icons .icon{
-    border-radius: 50px;
-    color: var(--background-color);
-    background: var(--text-color);
-    width: 50px;
-    height: 50px;
-    display: inline-flex;
-    justify-content: center;
+    padding: 0 10px;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
+    white-space: nowrap;
+    list-style: none;
+    display: inline-flex;
+}
+
+.socialmenu ul li .bx {
+    font-size: 40px;
+    color: var(--darkest-color);
+    transition: .6s;
+    color: #000;
+    margin-top: 10px;
+}
+
+.socialmenu ul li a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: var(--text-color);
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(255, 255, 255, 0.205);
+}
+
+.socialmenu ul li a:hover {
+    transform: translate(0, -10px);
+}
+
+.socialmenu ul li:nth-child(1) a:hover {
+    background-color: #d01faa;
+}
+
+.socialmenu ul li:nth-child(2) a:hover {
+    background-color: #0d78e2;
+}
+
+.socialmenu ul li:nth-child(3) a:hover {
+    background-color: #2B3137;
+}
+
+.socialmenu ul li:nth-child(4) a:hover {
+    background-color: #ea4335;
 }
 
 
+/*workspace*/
+.skills {
+    position: relative;
+    padding-top: 20em;
+    z-index: 1;
+    height: auto;
+    max-width: fit-content;
+}
+
+.titlework {
+    font-size: 80px;
+    color: var(--text-color);
+    font-weight: 800;
+    margin-left: 5em;
+}
+
+.tools {
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    display: flex;
+}
+
+div .tools{
+    left: 100em;
+}
+
+.tools img {
+    margin-top: 20em;
+    border-radius: 40px;
+    background: var(--text-color);
+    padding: 2em 2em;
+    margin-left: 2em ;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 1px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 50px;
+}
