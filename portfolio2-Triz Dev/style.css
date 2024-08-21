@@ -24,15 +24,14 @@
 }
 
 body {
-    background: var(--first-color);
-    width: auto;
+    background: var(--background-color);
+    width: 100%;
 }
 
 .container {
-    max-width: 144vh;
+    max-width: 150em;
     max-height: 144vh;
     margin-left: 10rem;
-    margin-right: 10rem;
 }
 
 /*Inicio*/
@@ -261,6 +260,7 @@ button {
 .skills {
     position: relative;
     padding-top: 20em;
+    padding-bottom: 20em;
     z-index: 1;
     height: auto;
     max-width: fit-content;
@@ -273,23 +273,24 @@ button {
     margin-left: 5em;
 }
 
+
 .tools {
     align-items: center;
-    width: 4em;
-    height: 4em;
-    display: flex;
+
 }
 
 div .tools{
-    left: 100em;
+    margin-top: 30px;
 }
 
 .tools img {
-    margin-top: 20em;
-    border-radius: 40px;
-    background: var(--text-color);
-    padding: 2em 2em;
-    margin-left: 2em ;
+    margin-left: 3.5em;
+    margin-right: 7em;
+    width: 6em;
+    height: 6em;
+    background-color: ;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 /*scrollbar*/
